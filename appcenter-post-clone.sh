@@ -8,7 +8,9 @@ free -h || echo true
 df -h || echo true
 cat /proc/cpuinfo || echo true
 
-brew install gnu-sed --with-default-names
+brew install gnu-sed
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+ls -ltr /usr/local/opt/gnu-sed/libexec/gnubin/
 echo $PATH
 
 sed -i "s/.*versionName.*$/versionName $VERSION/" $APPCENTER_SOURCE_DIRECTORY/android/app/build.gradle
