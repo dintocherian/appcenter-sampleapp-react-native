@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/usr/bin/env bash
 
 cat /etc/os-release || echo true
 cat /etc/system-release || echo true
